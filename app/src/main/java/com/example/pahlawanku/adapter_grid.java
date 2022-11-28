@@ -16,11 +16,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class adaptercard extends  RecyclerView.Adapter<adaptercard.classviewholder> {
+public class adapter_grid extends  RecyclerView.Adapter<adapter_grid.classviewholder> {
     private ArrayList<modelpahlawan> datapahlawan;
     private Context ctx;
 
-    public adaptercard(ArrayList<modelpahlawan> datapahlawan, Context ctx) {
+
+    public adapter_grid(ArrayList<modelpahlawan> datapahlawan, Context ctx) {
         this.datapahlawan = datapahlawan;
         this.ctx = ctx;
     }
@@ -28,7 +29,7 @@ public class adaptercard extends  RecyclerView.Adapter<adaptercard.classviewhold
     @NonNull
     @Override
     public classviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View varview = LayoutInflater.from(ctx).inflate(R.layout.card, parent, false);
+        View varview = LayoutInflater.from(ctx).inflate(R.layout.item_grid, parent, false);
         return new classviewholder(varview);
     }
 
@@ -36,13 +37,12 @@ public class adaptercard extends  RecyclerView.Adapter<adaptercard.classviewhold
     public void onBindViewHolder(@NonNull classviewholder holder, int position) {
 
         modelpahlawan pahlawan= datapahlawan.get(position);
-        holder.tvnama.setText(pahlawan.getNama());
-        holder.tvtentang.setText(pahlawan.getTentang());
+
         Glide
                 .with(ctx)
                 .load(pahlawan.getFoto())
                 .centerCrop()
-                .into(holder.ivfoto);
+                .into(holder.iv_grid);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +51,9 @@ public class adaptercard extends  RecyclerView.Adapter<adaptercard.classviewhold
                 xnama= pahlawan.getNama();
                 xfoto= pahlawan.getFoto();
                 xtentang = pahlawan.getTentang();
+
                 Intent kirim = new Intent(ctx,detail.class);
+
                 kirim.putExtra("xnama", xnama);
                 kirim.putExtra("xfoto", xfoto);
                 kirim.putExtra("xtentang", xtentang);
@@ -69,15 +71,13 @@ public class adaptercard extends  RecyclerView.Adapter<adaptercard.classviewhold
     }
 
     public  class classviewholder extends RecyclerView.ViewHolder{
-ImageView ivfoto;
-TextView tvnama,tvtentang;
+        ImageView iv_grid;
 
         public classviewholder(@NonNull View itemView) {
 
             super(itemView);
-            ivfoto= itemView.findViewById(R.id.iv_foto);
-            tvnama= itemView.findViewById(R.id.tv_nama);
-            tvtentang= itemView.findViewById(R.id.tv_tentang);
+            iv_grid= itemView.findViewById(R.id.iv_grid);
+
         }
     }
 }

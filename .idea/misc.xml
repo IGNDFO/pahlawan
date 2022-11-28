@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/card.xml" value="0.25" />
         <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/cardview.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/detail.xml" value="0.25" />
+        <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/layout/item_grid.xml" value="0.25" />
+        <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/menu/menu_mode.xml" value="0.25" />
         <entry key="..\:/Users/marti/Documents/NANDO_PAB/pahlawanku/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
